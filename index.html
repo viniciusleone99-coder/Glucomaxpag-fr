@@ -221,14 +221,14 @@
 
   /* ---------- CTA (KashPay markup untouched; visual override only, no display changes) ---------- */
   .cta-halo{position:relative;width:min(100%,480px);margin:28px auto 0}
-  .cta-halo button[onclick^="acceptUpsell"]{position:relative;overflow:hidden;width:100%!important;min-height:68px;
+  .cta-halo button.checkout-offer{position:relative;overflow:hidden;width:100%!important;min-height:68px;
     font-family:var(--body)!important;font-size:clamp(21px,5.8vw,26px)!important;font-weight:800!important;letter-spacing:-.01em;color:#fff!important;
     background:linear-gradient(180deg,#5af08e 0%,#22c862 45%,#11903f 100%)!important;border:1px solid rgba(200,255,220,.6)!important;border-radius:18px!important;padding:16px 22px!important;
     box-shadow:0 0 0 5px rgba(61,220,132,.12),0 0 44px rgba(61,220,132,.45),0 20px 40px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.5);
     animation:cpulse 1.4s ease-in-out infinite;transition:transform .18s ease;-webkit-tap-highlight-color:transparent}
-  .cta-halo button[onclick^="acceptUpsell"]:hover{transform:translateY(-2px)}
-  .cta-halo button[onclick^="acceptUpsell"]:active{transform:translateY(1px) scale(.99)}
-  .cta-halo button[onclick^="acceptUpsell"]:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+  .cta-halo button.checkout-offer:hover{transform:translateY(-2px)}
+  .cta-halo button.checkout-offer:active{transform:translateY(1px) scale(.99)}
+  .cta-halo button.checkout-offer:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
   @keyframes cpulse{0%,100%{box-shadow:0 0 0 5px rgba(61,220,132,.12),0 0 34px rgba(61,220,132,.4),0 20px 40px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.5)}
     14%{box-shadow:0 0 0 9px rgba(61,220,132,.08),0 0 60px rgba(61,220,132,.65),0 20px 40px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.5)}
     28%{box-shadow:0 0 0 5px rgba(61,220,132,.12),0 0 38px rgba(61,220,132,.45),0 20px 40px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.5)}}
@@ -346,7 +346,7 @@
   .price-line s{color:var(--muted)}
   .price-line strong{color:var(--gold-hi);font-size:18px}
   .cta-halo button small{display:block;margin-top:4px;font-size:13.5px;font-weight:600;letter-spacing:0;line-height:1.3}
-  .cta-halo button[onclick^="acceptUpsell"]{color:#04240f!important}
+  .cta-halo button.checkout-offer{color:#04240f!important}
   .decline{display:block;width:fit-content;margin:16px auto 0;padding:12px;font:500 15px/1.4 var(--body);color:var(--muted);background:none;border:0;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
   .bank{margin:18px 18px 0;padding:14px 16px;border-radius:16px;border:1px solid rgba(243,197,108,.25);background:rgba(0,0,0,.25);font-size:14.5px;line-height:1.5;color:var(--soft)}
   .bank strong{color:var(--gold-hi)}
@@ -388,7 +388,7 @@
   .why{margin-top:26px;padding:16px;border-radius:16px;border:1px solid rgba(243,197,108,.3);background:rgba(243,197,108,.06);font-size:16px;color:var(--soft)}
   .why b{display:block;color:var(--gold-hi);font-size:17px}
   .readout .body{padding:18px 18px 20px}
-  .cta-halo button[onclick^="acceptUpsell"]{font-size:clamp(19px,5.2vw,25px)!important;text-wrap:balance}
+  .cta-halo button.checkout-offer{font-size:clamp(19px,5.2vw,25px)!important;text-wrap:balance}
   .device .stage{contain:paint;-webkit-mask-image:linear-gradient(180deg,#000 92%,transparent)!important;mask-image:linear-gradient(180deg,#000 92%,transparent)!important}
 
   /* ================= v6: tela-portal ================= */
@@ -606,7 +606,7 @@
     </div>
   </div>
   <div class="cta-halo">
-    <button type="button" onclick="acceptUpsell('https://checkout.kashpay.com/u/318b48af48f2826a')" style="font-family: 'Poppins'; font-size: 21px; font-weight: 600; line-height: 1.3; color: #ffffff; background-color: #057932; border: none; border-radius: 49px; padding: 13px 7%; cursor: pointer; text-align: center; display: block; margin: auto;">Profitez de l’offre!</button>
+    <button type="button" class="checkout-offer" onclick="window.location.assign('https://checkout.kashpay.com/checkout/checkout-1795705967179')" style="font-family: 'Poppins'; font-size: 21px; font-weight: 600; line-height: 1.3; color: #ffffff; background-color: #057932; border: none; border-radius: 49px; padding: 13px 7%; cursor: pointer; text-align: center; display: block; margin: auto;">Profitez de l’offre!</button>
   </div>
   <button type="button" class="decline" onclick="declineUpsell('https://checkout.kashpay.com/u/f71b69b6782eef26')">Non merci, je continue sans cette remise</button>
   <p class="bank"><strong>Votre banque vous envoie une notification&nbsp;?</strong> Vérifiez le montant et validez-la. Rien ne s'affiche&nbsp;? Ouvrez l'application de votre banque. Gardez cette page ouverte pendant la validation.</p>
